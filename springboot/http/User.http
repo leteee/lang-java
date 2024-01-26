@@ -1,0 +1,4 @@
+### 列表查询
+GET {{host}}/user/list
+### 分页
+GET {{host}}/user/page

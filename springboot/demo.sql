@@ -11,5 +11,9 @@ CREATE TABLE `user`
   DEFAULT CHARSET = utf8mb4
   COLLATE = utf8mb4_unicode_ci;
 insert into user(username, nickname, password)
-values ("light", "小明", "123456");
+values ("a", "A", "123456"),
+       ("b", "B", "123456"),
+       ("c", "C", "123456"),
+       ("d", "D", "123456"),
+       ("e", "E", "123456");
 

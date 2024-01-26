@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface IUserService {
     List<User> list();
+
+    List<User> page(Integer pageNum, Integer pageSize);
 }

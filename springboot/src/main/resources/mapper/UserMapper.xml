@@ -5,7 +5,7 @@
 <mapper namespace="com.example.springboot.mapper.UserMapper">
 
     <select id="list" resultType="com.example.springboot.entity.User">
-        select id, username, nickname
+        select id, username, nickname, password
         from user
     </select>
 
