@@ -1,3 +1,8 @@
+#  创建数据库
+create database demo DEFAULT CHARSET = utf8mb4;
+use demo;
+
+# user表和数据
 drop table if exists `user`;
 CREATE TABLE `user`
 (
