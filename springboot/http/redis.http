@@ -1,0 +1,6 @@
+### 新增
+POST {{host}}/redis?key=hello&value=world
+### 获取
+GET {{host}}/redis?key=hello
+### 删除
+DELETE {{host}}/redis?key=hello

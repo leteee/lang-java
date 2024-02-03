@@ -19,17 +19,21 @@ public class R<T> implements Serializable {
     public R() {
     }
 
-    public R(RCode rCode,T data) {
+    public R(RCode rCode, T data) {
         this.code = rCode.getCode();
         this.msg = rCode.getMsg();
         this.data = data;
     }
 
-    public static <T> R success(T data){
-        return new R(RCode.SUCCESS,data);
+    public static <T> R success() {
+        return new R(RCode.SUCCESS, null);
     }
 
-    public static R failure(RCode rCode){
-        return new R(rCode,null);
+    public static <T> R success(T data) {
+        return new R(RCode.SUCCESS, data);
+    }
+
+    public static R failure(RCode rCode) {
+        return new R(rCode, null);
     }
 }
