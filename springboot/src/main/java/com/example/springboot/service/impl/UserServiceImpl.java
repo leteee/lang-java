@@ -17,13 +17,13 @@ public class UserServiceImpl implements IUserService {
     private UserMapper userMapper;
 
     @Override
-    public List<User> list() {
-        return userMapper.list();
+    public List<User> list(String nickname) {
+        return userMapper.list(nickname);
     }
 
     @Override
-    public List<User> page(Integer pageNum, Integer pageSize) {
-        List<User> data = PageHelper.startPage(pageNum, pageSize).doSelectPage(() -> userMapper.list());
+    public List<User> page(String nickname, Integer pageNum, Integer pageSize) {
+        List<User> data = PageHelper.startPage(pageNum, pageSize).doSelectPage(() -> userMapper.list(nickname));
         return data;
     }
 }

@@ -17,14 +17,15 @@ public class UserController {
 
     @GetMapping("/list")
     public R list() {
-        List<User> data = iUserService.list();
+        List<User> data = iUserService.list(null);
         return R.success(data);
     }
 
     @GetMapping("/page")
-    public R page(@RequestParam(value = "pageNum", defaultValue = "1", required = false) Integer pageNum,
+    public R page(@RequestParam(value = "nickname", defaultValue = "1", required = false) String nickname,
+                  @RequestParam(value = "pageNum", defaultValue = "1", required = false) Integer pageNum,
                   @RequestParam(value = "pageSize", defaultValue = "2", required = false) Integer pageSize) {
-        List<User> data = iUserService.page(pageNum, pageSize);
+        List<User> data = iUserService.page(nickname, pageNum, pageSize);
         return R.success(data);
     }
 }

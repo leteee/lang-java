@@ -6,7 +6,10 @@
 
     <select id="list" resultType="com.example.springboot.entity.User">
         select id, username, nickname, password
-        from user
+        from user where 1 = 1
+        <if test="nicename != null and nickname != ''">
+            and nickname like cancat('%', #{nickname}, '%')
+        </if>
     </select>
 
 </mapper>
