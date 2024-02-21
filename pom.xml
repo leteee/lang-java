@@ -9,5 +9,6 @@
 
 	<modules>
 		<module>springboot</module>
-	</modules>
+        <module>false-share</module>
+    </modules>
 </project>
