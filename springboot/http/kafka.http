@@ -1,0 +1,2 @@
+### 新增
+POST {{host}}/kafka?msg=hello
