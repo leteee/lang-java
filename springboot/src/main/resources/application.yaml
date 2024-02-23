@@ -19,6 +19,10 @@ spring:
           max-idle: 8 # 连接池中的最小空闲连接 默认 0
   kafka:
     bootstrap-servers: kafka.demo:9092
+    consumer:
+      group-id: test
+      auto-offset-reset: earliest
+      enable-auto-commit: true
 mybatis:
   mapper-locations: classpath:mapper/*.xml
 logging:
