@@ -12,5 +12,6 @@
         <module>false-share</module>
         <module>demo-spi</module>
         <module>demo-thread</module>
+        <module>demo-oom</module>
     </modules>
 </project>
