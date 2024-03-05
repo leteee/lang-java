@@ -13,5 +13,6 @@
         <module>demo-spi</module>
         <module>demo-thread</module>
         <module>demo-oom</module>
+        <module>demo-clone</module>
     </modules>
 </project>
