@@ -1,6 +1,6 @@
 FROM openjdk:22-ea-17-jdk
 
-LABEL email="leiteng712@gmail.com"
+LABEL email="leiteng712@gmail.com" desc="docker demo"
 
 WORKDIR /tmp
 

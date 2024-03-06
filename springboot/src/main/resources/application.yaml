@@ -30,3 +30,7 @@ logging:
     com:
       example:
         springboot: debug
+
+sms:
+  server:
+    type: ymx

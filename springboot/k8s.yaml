@@ -1,0 +1,39 @@
+#名称空间
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: demo
+  labels:
+    name: demo
+
+---
+
+#redis
+
+#mysql
+
+#kafka
+
+#app
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-deployment
+  namespace: demo
+  labels:
+    app: app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: app
+  template:
+    metadata:
+      labels:
+        app: app
+    spec:
+      containers:
+        - name: app
+          image: hub.docker.com/repositories/leiteng712/leiteng712/java-web
+          ports:
+            - containerPort: 80

@@ -14,5 +14,7 @@
         <module>demo-thread</module>
         <module>demo-oom</module>
         <module>demo-clone</module>
+        <module>lab</module>
+        <module>sms-spring-boot-starter</module>
     </modules>
 </project>
