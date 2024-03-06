@@ -5,8 +5,6 @@ import org.springframework.stereotype.Service;
 
 /**
  * 阿里云SMS实现
- * @author lixiang
- * @date 2023/5/16 09:30
  */
 @Service("ali")
 public class AliCloudSmsServiceImpl implements SmsService {

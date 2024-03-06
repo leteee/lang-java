@@ -7,9 +7,9 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 
+
 /**
- * @author lixiang
- * @date 2023/5/16 09:27
+ * https://cloud.tencent.com/developer/article/2292258
  */
 @ComponentScan
 @AutoConfiguration
@@ -19,7 +19,7 @@ public class SmsAutoConfiguration {
 
     @Bean
     @ConditionalOnMissingBean
-    public SmsTemplate smsTemplate(){
+    public SmsTemplate smsTemplate() {
         return new SmsTemplate();
     }
 

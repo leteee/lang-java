@@ -5,8 +5,6 @@ import org.springframework.stereotype.Service;
 
 /**
  * 腾讯云SMS实现
- * @author lixiang
- * @date 2023/5/16 09:44
  */
 @Service("tx")
 public class TxCloudSmsServiceImpl implements SmsService {
