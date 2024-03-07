@@ -1,12 +1,8 @@
-package com.example.service;
-
-import com.example.SmsService;
-import org.springframework.stereotype.Service;
+package com.example;
 
 /**
  * 腾讯云SMS实现
  */
-@Service("tx")
 public class TxCloudSmsServiceImpl implements SmsService {
     @Override
     public String send(String fromPhone, String toPhone, String content) {

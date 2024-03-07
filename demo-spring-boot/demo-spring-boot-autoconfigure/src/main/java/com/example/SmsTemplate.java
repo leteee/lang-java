@@ -1,6 +1,5 @@
 package com.example;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 
 /**
@@ -8,12 +7,14 @@ import org.springframework.context.ApplicationContext;
  * @date 2023/5/16 09:33
  */
 public class SmsTemplate {
+    private ApplicationContext context;
 
-    @Autowired
     private SmsProperties smsProperties;
 
-    @Autowired
-    private ApplicationContext context;
+    public SmsTemplate(ApplicationContext context, SmsProperties smsProperties) {
+        this.context = context;
+        this.smsProperties = smsProperties;
+    }
 
     public String send(String fromPhone, String toPhone, String content) {
         //获取云厂商的业务实现类

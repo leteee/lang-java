@@ -1,12 +1,8 @@
-package com.example.service;
-
-import com.example.SmsService;
-import org.springframework.stereotype.Service;
+package com.example;
 
 /**
  * 阿里云SMS实现
  */
-@Service("ali")
 public class AliCloudSmsServiceImpl implements SmsService {
 
     @Override

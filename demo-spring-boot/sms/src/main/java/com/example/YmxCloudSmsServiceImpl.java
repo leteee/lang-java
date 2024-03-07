@@ -1,12 +1,8 @@
-package com.example.service;
-
-import com.example.SmsService;
-import org.springframework.stereotype.Service;
+package com.example;
 
 /**
  * 亚马逊云SMS实现
  */
-@Service("ymx")
 public class YmxCloudSmsServiceImpl implements SmsService {
     @Override
     public String send(String fromPhone, String toPhone, String content) {
