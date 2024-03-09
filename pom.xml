@@ -15,7 +15,8 @@
         <module>demo-oom</module>
         <module>demo-clone</module>
         <module>lab</module>
-        <module>demo-time-whell</module>
+        <module>demo-time-wheel</module>
         <module>demo-spring-boot</module>
+        <module>demo-leetcode</module>
     </modules>
 </project>
