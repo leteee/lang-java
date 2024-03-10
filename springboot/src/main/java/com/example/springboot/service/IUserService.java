@@ -8,4 +8,6 @@ public interface IUserService {
     List<User> list(String nickname);
 
     List<User> page(String nickname, Integer pageNum, Integer pageSize);
+
+    void mysqlLock(String tid);
 }

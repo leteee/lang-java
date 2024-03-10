@@ -12,4 +12,10 @@
         </if>
     </select>
 
+    <update id="updateNicknameById">
+        update user
+        set nickname = #{nickname}
+        where id = #{id}
+    </update>
+
 </mapper>

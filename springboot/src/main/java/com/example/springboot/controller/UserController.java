@@ -31,4 +31,20 @@ public class UserController {
         List<User> data = iUserService.page(nickname, pageNum, pageSize);
         return R.success(data);
     }
+
+    /**
+     * 测试mysql锁
+     * <p>
+     * #查询进程
+     * show processlist;
+     * # 查看锁
+     * SELECT * FROM INFORMATION_SCHEMA.INNODB_TRX;
+     *
+     * @return
+     */
+    @GetMapping("/mysqlLock")
+    public R page(@RequestParam(value = "tid", required = true) String tid) {
+        iUserService.mysqlLock(tid);
+        return R.success();
+    }
 }
