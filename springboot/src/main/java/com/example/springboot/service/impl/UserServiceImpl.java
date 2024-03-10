@@ -30,6 +30,7 @@ public class UserServiceImpl implements IUserService {
         return data;
     }
 
+//    @Transactional(rollbackFor = Exception.class)
     @Transactional()
     @Override
     public void mysqlLock(String tid) {
@@ -41,6 +42,7 @@ public class UserServiceImpl implements IUserService {
             log.info("事务{}-完成", tid);
         } catch (InterruptedException e) {
             log.error("事务{}-报错", e);
+            throw new RuntimeException(e);  // 抛出RuntimeException异常才能回滚事务
         }
     }
 
